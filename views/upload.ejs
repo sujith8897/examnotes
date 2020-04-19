@@ -1,0 +1,43 @@
+<%- include('departments/partials/header');-%>
+
+
+<div class="container" style="color:#010138;padding-top:60px;height:550px;">
+<h3 style="text-align:center;">Upload Files</h3>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="upload_option"><h5>Select Branch</h5></label>
+  <select class="form-control" id="sel1" required="true" name="upload_option" >
+    <option disabled="on" >Select Branch</option>
+    <option name="upload_option" value"cse">CSE</option>
+    <option name="upload_option" value"ece">ECE</option>
+    <option name="upload_option" value"eee">EEE</option>
+    <option name="upload_option" value"civ">CIV</option>
+    <option name="upload_option" value"mech">MECH</option>
+  </select>
+</div>
+  <div class="form-group">
+    <label for="upload_option1"><h5>Select Sem</h5></label>
+  <select class="form-control" id="sel2" required="true" name="upload_option1">
+    <option disabled="on" >Select Sem</option>
+    <option name="upload_option1" value"sem1">I</option>
+    <option name="upload_option1" value"sem2">II</option>
+    <option name="upload_option1" value"sem3">III</option>
+    <option name="upload_option1" value"sem4">IV</option>
+    <option name="upload_option1" value"sem5">V</option>
+    <option name="upload_option1" value"sem6">VI</option>
+  </select>
+</div>
+    <div class="form-group">
+      <label for="fileName"><h5>Name</h5></label>
+      <input type="text" class="form-control"  placeholder="Enter File Name" name="fileName" required=true>
+    </div>
+        <div class="form-group">
+      <label for="file"><h5>Upload</h5></label>
+      <input type="file" class="form-control"  name="file" required=true>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+<%- include('departments/partials/footer');-%>

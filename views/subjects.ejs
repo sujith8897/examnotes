@@ -1,0 +1,29 @@
+ <%- include('departments/partials/header');-%>
+
+<div class="poster">
+  <h1>ExamNotes</h1>
+    <h2 style="text-align:center;">Notes</h2>
+</div>
+
+
+<div style="text-align: center;" >
+  <h3 class="alert alert-primary">Upload Here <a href="/upload" ><button class="btn btn-primary">Enter</button></a></h3>
+</div>
+
+<div class="subjects">
+        <% if(files){ %>
+        <ul>
+          <% for(var i=0;i<files.length;i++) {  %>
+           <li>
+              <h4 style="color:blue;"><%= files[i].filename %></h4>
+               <a  href = "/notes/<%=urlName%>/<%= files[i].filename %>" target = "_blank"><button class="btn btn-success">Download</button></a>
+               <hr>
+            </li>
+            <% } %>
+            </ul>
+
+              <% } else { %>
+                <p>No files to show</p> 
+                <% } %>
+
+ <%- include('departments/partials/footer');-%>

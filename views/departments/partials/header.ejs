@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exam Notes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<script type="text/javascript" src="script.js"></script>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style type="text/css">
+
+  html{
+    scroll-behavior: smooth;
+  }
+	.dropdown-item:hover{
+           background-color: #0066ff;
+           color: white;
+	}
+	.card-title,.card-text{
+		text-align: center;
+
+	}
+     .nav-link b{
+          font-size: 15px;
+          color: white;
+
+     }
+     .nav-link b:hover{
+
+           color: #ff9933;
+     }
+     .card-body h4{
+     	color: black;
+     	text-decoration: none;
+     }
+    .color{
+    	background-color: #ff9933;
+    	color: white;
+    }
+
+    .footer{
+    	background-color: black;
+    	color: white;
+    	padding: 10px;
+    	text-align: center;
+      width: 100%;
+    }
+    .panel {
+  display: none;
+}
+
+/*    #relative{
+      position: relative;
+    }
+
+    .sticky{
+      left: 0;
+      top: 0;
+      width: 100%;
+    }*/
+
+</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+<div id="relative">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
+  <a class="navbar-brand" href="/#top" ><b>ExamNotes</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link home" href="/"><b style="color: #ff9933;">Home</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/cse"><b class="showCSE" onclick="myFunction(this.className)">Computer Science</b></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/ece"><b class="showECE" onclick="myFunction(this.className)">Electronics</b></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/eee"><b class="showEEE" onclick="myFunction(this.className)">Electrical</b></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/civ"><b class="showCIV" onclick="myFunction(this.className)">Civil</b></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/mech"><b class="showMECH" onclick="myFunction(this.className)">Mechanical</b></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/upload"><b>Upload</b></a>
+      </li>
+    </ul>
+<!--     <form class="form-inline my-2 my-lg-0" method="post" action="/notes">
+      <input class="form-control mr-sm-2" type="text" placeholder="Subject Name" name="searchName" >
+      <button class="btn btn-primary my-2 my-sm-0" type="submit" ng-disabled="disable" ng-click="click();">Go</button>
+    </form> -->
+  </div>
+</nav>
+</div>
