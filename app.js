@@ -51,6 +51,7 @@ const storage = new GridFsStorage({
     });
   }
 });
+
 const upload = multer({ storage });
 
 // const info=new mongoose.Schema({
@@ -94,7 +95,6 @@ app.get("/upload",(req,res)=>{
 // @desc  Uploads file to DB
 app.post('/upload', upload.single('file'), (req, res) => {
   // res.json({ file: req.file });
-
   res.render('successfull');
 });
 
@@ -115,9 +115,6 @@ app.get('/notes/:path/:filename', (req, res) => {
     }
     // File exists
     const readstream = gfs.createReadStream(file.filename);
-    // let result=readstream.pipe(res);
-    // return result;
-    res.set('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
     console.log(readstream.pipe(res));
   });
 });
